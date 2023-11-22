@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="orderForm">
+        <label for="customerName">Customer Name:</label>
+        <input type="text" id="customerName" required><br>
+        
+        <label>Pizza Size:</label><br>
+        <input type="radio" name="size" value="8" required> Small ($8)<br>
+        <input type="radio" name="size" value="10"> Medium ($10)<br>
+        <input type="radio" name="size" value="12"> Large ($12)<br>
+        <input type="radio" name="size" value="14"> X-Large ($14)<br>
+        
+        <label>Toppings ($1.50 each):</label><br>
+        <input type="checkbox" name="topping" value="Pepperoni"> Pepperoni<br>
+        <input type="checkbox" name="topping" value="Mushrooms"> Mushrooms<br>
+        <input type="checkbox" name="topping" value="Onions"> Onions<br>
+        <input type="checkbox" name="topping" value="Sausage"> Sausage<br>
+        <input type="checkbox" name="topping" value="Bacon"> Bacon<br>
+        <input type="checkbox" name="topping" value="Bacon"> Extra Cheese<br>
+        <input type="checkbox" name="topping" value="Bacon"> Spinach<br>
+        <input type="checkbox" name="topping" value="Bacon"> Green Peppers<br>
+        <input type="checkbox" name="topping" value="Bacon"> No Topping at All<br>
+
+
+        <label for="deliveryMethod">Delivery Method:</label>
+        <select id="deliveryMethod">
+            <option value="0">Pickup (Free)</option>
+            <option value="2">Delivery ($2)</option>
+        </select><br>
+        
+        <input type="button" value="Order" onclick="calculateOrder()">
+    </form>
+
+    <div id="orderDetails"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
